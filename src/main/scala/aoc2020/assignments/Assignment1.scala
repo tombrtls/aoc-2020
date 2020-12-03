@@ -1,6 +1,6 @@
 package aoc2020.assignments
 
-import aoc2020._;
+import aoc2020._
 
 object Assignment1 extends BaseAssignment[List[Int], Int] {
   implicit class Crossable[X](xs: Iterable[X]) {
@@ -22,15 +22,11 @@ object Assignment1 extends BaseAssignment[List[Int], Int] {
       (tuple._1 + tuple._2) == value
     }
 
-    val combination =
-      input
-        .cross(input)
-        .find(sumTuple2Equals(2020))
-
-    combination match {
-      case Some((val1, val2)) => val1 * val2
-      case None               => 0
-    }
+    input
+      .cross(input)
+      .find(sumTuple2Equals(2020))
+      .map { case (val1, val2) => val1 * val2 }
+      .getOrElse(0)
   }
 
   def processPart2(input: List[Int]): Int = {
@@ -38,17 +34,12 @@ object Assignment1 extends BaseAssignment[List[Int], Int] {
       (tuple._1 + tuple._2 + tuple._3) == value
     }
 
-    val combination =
-      input
-        .cross(input)
-        .cross(input)
-        .map(flattenTuple)
-        .find(sumTuple3Equals(2020))
-
-    combination match {
-      case Some((val1, val2, val3)) => val1 * val2 * val3
-      case None                     => 0
-    }
+    input
+      .cross(input)
+      .cross(input)
+      .map(flattenTuple)
+      .find(sumTuple3Equals(2020))
+      .map { case (val1, val2, val3) => val1 * val2 * val3 }
+      .getOrElse(0)
   }
-
 }
