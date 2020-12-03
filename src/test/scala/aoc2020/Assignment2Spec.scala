@@ -1,10 +1,10 @@
-package assignments
+package aoc2020.assignments
 
 import org.scalatest._;
 import flatspec._;
 import matchers._;
 
-class Assignment1Spec extends AnyFlatSpec with should.Matchers {
+class Assignment2Spec extends AnyFlatSpec with should.Matchers {
   var testInput = ???
   var actualInput = ???
 
