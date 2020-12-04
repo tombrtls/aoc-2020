@@ -4,7 +4,7 @@ import aoc2020.assignments.toboggantrajectory
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 
-class AssignmentSpec extends AnyFlatSpec with should.Matchers {
+class TrajectoryAssignmentSpec extends AnyFlatSpec with should.Matchers {
   var testInput = "assign_3_test.txt"
   var actualInput = "assign_3.txt"
 
@@ -23,17 +23,17 @@ class AssignmentSpec extends AnyFlatSpec with should.Matchers {
   }
 
   "part 1" should "return 7" in {
-    Assignment.executePart1(testInput) should be(7)
+    TrajectoryAssignment.executePart1(testInput) should be(7)
   }
   "part 1" should "return 176" in {
-    Assignment.executePart1(actualInput) should be(176)
+    TrajectoryAssignment.executePart1(actualInput) should be(176)
   }
 
   "part 2" should "return 336" in {
-    Assignment.executePart2(testInput) should be(336)
+    TrajectoryAssignment.executePart2(testInput) should be(336)
   }
 
   "part 2" should "return 5872458240" in {
-    Assignment.executePart2(actualInput) should be(BigInt(5872458240L))
+    TrajectoryAssignment.executePart2(actualInput) should be(BigInt(5872458240L))
   }
 }

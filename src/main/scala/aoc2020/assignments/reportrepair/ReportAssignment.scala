@@ -2,7 +2,7 @@ package aoc2020.assignments.reportrepair
 
 import aoc2020.assignments.BaseAssignment
 
-object Assignment extends BaseAssignment[List[Int], Int] {
+object ReportAssignment extends BaseAssignment[List[Int], Int] {
 
   println(executePart1("assign_1.txt"))
 

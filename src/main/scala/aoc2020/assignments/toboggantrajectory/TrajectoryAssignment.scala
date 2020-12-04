@@ -2,7 +2,7 @@ package aoc2020.assignments.toboggantrajectory
 
 import aoc2020.assignments.BaseAssignment
 
-object Assignment extends BaseAssignment [GeoMap, BigInt]{
+object TrajectoryAssignment extends BaseAssignment [GeoMap, BigInt]{
   override def prepareLinesForInput(lines: List[String]): GeoMap = {
     GeoMap(lines.map(lineToTiles))
   }

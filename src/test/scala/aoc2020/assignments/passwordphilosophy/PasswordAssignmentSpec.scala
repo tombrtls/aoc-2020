@@ -3,7 +3,7 @@ package aoc2020.assignments.passwordphilosophy
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 
-class AssignmentSpec extends AnyFlatSpec with should.Matchers {
+class PasswordAssignmentSpec extends AnyFlatSpec with should.Matchers {
   var testInput = "assign_2_test.txt"
   var actualInput = "assign_2.txt"
 
@@ -31,17 +31,17 @@ class AssignmentSpec extends AnyFlatSpec with should.Matchers {
   }
 
   "part 1" should "return 2" in {
-    Assignment.executePart1(testInput) should be(2)
+    PasswordAssignment.executePart1(testInput) should be(2)
   }
   "part 1" should "return 660" in {
-    Assignment.executePart1(actualInput) should be(660)
+    PasswordAssignment.executePart1(actualInput) should be(660)
   }
 
   "part 2" should "return 1" in {
-    Assignment.executePart2(testInput) should be(1)
+    PasswordAssignment.executePart2(testInput) should be(1)
   }
 
   "part 2" should "return 530" in {
-    Assignment.executePart2(actualInput) should be(530)
+    PasswordAssignment.executePart2(actualInput) should be(530)
   }
 }
