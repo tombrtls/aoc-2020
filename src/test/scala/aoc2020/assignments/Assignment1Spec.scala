@@ -1,8 +1,8 @@
 package aoc2020.assignments
 
-import org.scalatest._;
-import flatspec._;
-import matchers._;
+import org.scalatest._
+import org.scalatest.flatspec._
+import org.scalatest.matchers._;
 
 class Assignment1Spec extends AnyFlatSpec with should.Matchers {
 
