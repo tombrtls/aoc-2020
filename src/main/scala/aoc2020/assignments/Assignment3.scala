@@ -1,9 +1,6 @@
-
 package aoc2020.assignments
 
 import aoc2020.Helper
-
-import scala.util.Try
 
 case class Vector(x: Int, y: Int) {
   def *(scalar: Int): Vector = {
@@ -36,9 +33,7 @@ case class GeoMap(tiles: List[List[GeoTile]]) {
     Range(0, steps)
       .inclusive
       .map(vector * _)
-      .count((loc) => {
-        isTreeAtLocation(loc)
-      })
+      .count(isTreeAtLocation)
   }
 }
 
