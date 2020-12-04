@@ -1,6 +1,5 @@
-package aoc2020.assignments
+package aoc2020.assignments.assignment2
 
-import org.scalatest._
 import org.scalatest.flatspec._
 import org.scalatest.matchers._;
 

@@ -1,5 +1,6 @@
-package aoc2020.assignments
+package aoc2020.assignments.assignment3
 
+import aoc2020.assignments.assignment3
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 
@@ -8,17 +9,17 @@ class Assignment3Spec extends AnyFlatSpec with should.Matchers {
   var actualInput = "assign_3.txt"
 
   "Vector" should "multiply" in {
-    (Vector(1,1) * 2) should be(Vector(2, 2))
-    (Vector(1,1) * 3) should be(Vector(3, 3))
-    (Vector(1,3) * 3) should be(Vector(3, 9))
-    (Vector(3,1) * 3) should be(Vector(9, 3))
+    (assignment3.Vector(1,1) * 2) should be(assignment3.Vector(2, 2))
+    (assignment3.Vector(1,1) * 3) should be(assignment3.Vector(3, 3))
+    (assignment3.Vector(1,3) * 3) should be(assignment3.Vector(3, 9))
+    (assignment3.Vector(3,1) * 3) should be(assignment3.Vector(9, 3))
   }
 
   "GeoMap" should "wrap it's locations around horizontally" in {
     val map = GeoMap(List(List(Tree, Empty)))
-    map.isTreeAtLocation(Vector(0, 0)) should be (true)
-    map.isTreeAtLocation(Vector(1, 0)) should be (false)
-    map.isTreeAtLocation(Vector(2, 0)) should be (true)
+    map.isTreeAtLocation(assignment3.Vector(0, 0)) should be (true)
+    map.isTreeAtLocation(assignment3.Vector(1, 0)) should be (false)
+    map.isTreeAtLocation(assignment3.Vector(2, 0)) should be (true)
   }
 
   "part 1" should "return 7" in {

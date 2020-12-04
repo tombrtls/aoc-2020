@@ -1,6 +1,6 @@
-package aoc2020.assignments
+package aoc2020.assignments.assignment1
 
-import aoc2020._
+import aoc2020.assignments.BaseAssignment
 
 object Assignment1 extends BaseAssignment[List[Int], Int] {
 
