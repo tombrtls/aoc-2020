@@ -1,6 +1,6 @@
 package aoc2020.assignments
 
-abstract class BaseAssignment[Input, Output] {
+abstract class BaseAssignment[Input, Output] extends App {
   def prepareInput(filePath: String): Input
 
   def processPart1(input: Input): Output

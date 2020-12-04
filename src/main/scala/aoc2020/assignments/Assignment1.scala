@@ -3,6 +3,9 @@ package aoc2020.assignments
 import aoc2020._
 
 object Assignment1 extends BaseAssignment[List[Int], Int] {
+
+  println(executePart1("assign_1.txt"))
+
   implicit class Crossable[X](xs: Iterable[X]) {
     def cross[Y](ys: Iterable[Y]): Iterable[(X, Y)] =
       for { x <- xs; y <- ys } yield (x, y)
