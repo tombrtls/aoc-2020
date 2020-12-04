@@ -1,4 +1,4 @@
-package aoc2020.assignments.assignment2
+package aoc2020.assignments.passwordphilosophy
 
 import scala.util.Try
 

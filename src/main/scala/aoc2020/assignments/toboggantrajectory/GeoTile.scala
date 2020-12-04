@@ -1,4 +1,4 @@
-package aoc2020.assignments.assignment3
+package aoc2020.assignments.toboggantrajectory
 
 class GeoTile
 case object Tree extends GeoTile

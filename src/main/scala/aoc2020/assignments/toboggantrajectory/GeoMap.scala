@@ -1,4 +1,4 @@
-package aoc2020.assignments.assignment3
+package aoc2020.assignments.toboggantrajectory
 
 case class GeoMap(tiles: List[List[GeoTile]]) {
   val height: Int = tiles.length

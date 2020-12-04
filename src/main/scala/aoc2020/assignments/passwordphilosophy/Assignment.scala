@@ -1,8 +1,8 @@
-package aoc2020.assignments.assignment2
+package aoc2020.assignments.passwordphilosophy
 
 import aoc2020.assignments.BaseAssignment
 
-object Assignment2 extends BaseAssignment [List[Password], Int]{
+object Assignment extends BaseAssignment [List[Password], Int]{
   override def prepareLinesForInput(lines: List[String]): List[Password] = {
     val passwordRegex = """(\d+)-(\d+) (\w): (\w*)""".r
     lines.map {
