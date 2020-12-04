@@ -38,17 +38,12 @@ case class GeoMap(tiles: List[List[GeoTile]]) {
 }
 
 object Assignment3 extends BaseAssignment [GeoMap, BigInt]{
-  override def prepareInput(filePath: String) = {
-    val tiles = Helper.readLinesFromFile(filePath)
-      .map(line => {
-        line
-          .map(GeoTile.fromChar)
-          .toList
-      })
-      .toList
-
-    GeoMap(tiles)
+  override def prepareLinesForInput(lines: List[String]): GeoMap = {
+    GeoMap(lines.map(lineToTiles))
   }
+
+  def lineToTiles(line: String) =
+    line.map(GeoTile.fromChar).toList
 
   override def processPart1(input: GeoMap) = {
     input.numberOfTreesFollowingVector(Vector(3, 1))

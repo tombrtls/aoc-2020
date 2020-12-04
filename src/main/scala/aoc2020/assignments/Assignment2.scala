@@ -20,13 +20,11 @@ case class Password(range: Range, char: Char, password: String) {
 }
 
 object Assignment2 extends BaseAssignment [List[Password], Int]{
-  override def prepareInput(filePath: String) = {
+  override def prepareLinesForInput(lines: List[String]): List[Password] = {
     val passwordRegex = """(\d+)-(\d+) (\w): (\w*)""".r
-    Helper.readLinesFromFile(filePath)
-      .map {
-        case passwordRegex(min, max, char, password) => Password(Range(min.toInt, max.toInt), char.charAt(0), password)
-      }
-      .toList
+    lines.map {
+      case passwordRegex(min, max, char, password) => Password(Range(min.toInt, max.toInt), char.charAt(0), password)
+    }
   }
 
   override def processPart1(input: List[Password]) = {

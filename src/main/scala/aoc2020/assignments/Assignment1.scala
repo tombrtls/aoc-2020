@@ -14,11 +14,8 @@ object Assignment1 extends BaseAssignment[List[Int], Int] {
   def flattenTuple[A, B, C](t: ((A, B), C)): (A, B, C) =
     (t._1._1, t._1._2, t._2)
 
-  def prepareInput(path: String): List[Int] =
-    Helper
-      .readLinesFromFile(path)
-      .map(_.toInt)
-      .toList
+  override def prepareLinesForInput(lines: List[String]): List[Int] =
+    lines.map(_.toInt)
 
   def processPart1(input: List[Int]): Int = {
     def sumTuple2Equals(value: Int) = { (tuple: (Int, Int)) =>
