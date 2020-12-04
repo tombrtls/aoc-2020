@@ -1,7 +1,7 @@
 package aoc2020.assignments
 
 import org.scalatest.flatspec._
-import org.scalatest.matchers._;
+import org.scalatest.matchers._
 
 class Assignment3Spec extends AnyFlatSpec with should.Matchers {
   var testInput = "assign_3_test.txt"
