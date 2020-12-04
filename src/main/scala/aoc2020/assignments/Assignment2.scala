@@ -36,3 +36,5 @@ object Assignment2 extends BaseAssignment [List[Password], Int]{
   override def processPart2(input: List[Password]) =
     input.count(_.isValidPart2)
 }
+
+
