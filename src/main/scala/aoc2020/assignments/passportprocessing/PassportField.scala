@@ -1,14 +1,14 @@
 package aoc2020.assignments.passportprocessing
 
-import aoc2020.assignments.passportprocessing.PassportFieldTypes.PasswordFieldType
-
-case class PassportField(fieldType: PassportFieldTypes.Value, value: String)
+case class PassportField(fieldType: PassportFieldType, value: String) {
+  def isValid: Boolean = fieldType.validate(value)
+}
 
 object PassportField {
-  def apply(fieldType: PasswordFieldType, value: String): PassportField = new PassportField(fieldType, value)
-  def apply(typeString: String, value: String): PassportField = {
-    val fieldType = PassportFieldTypes.withName(typeString)
-    new PassportField(fieldType, value)
+  def apply(fieldType: PassportFieldType, value: String): PassportField = new PassportField(fieldType, value)
+  def apply(typeString: String, value: String): Option[PassportField] = {
+    PassportFieldTypes.passportFieldTypeForName(typeString)
+      .map(PassportField(_, value))
   }
 }
 
